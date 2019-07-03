@@ -92,3 +92,82 @@ body
 {
     display: inline-block;
 }
+
+
+/* Clock Styling */
+.clock
+{
+    position: absolute;
+    border-radius: 25px;
+    top: 200px;
+    left: 500px;
+    display: inline-block;
+    height: 500px;
+    width: 900px;
+    background-color: whitesmoke;
+    color: whitesmoke;
+
+}
+
+.clock>.border
+{
+    border-radius: 5px;
+    background-color: black;
+    position: relative;
+    top: 50px;
+    left: 75px;
+    height: 300px;
+    width: 650px;
+    padding: 50px;
+    font-family: "digital-7_monomono";
+    text-align: center;
+}
+
+#day
+{
+    font-size: 100px;
+}
+
+#timeOfDay
+{
+    font-size: 50px;
+}
+
+#hourClock
+{
+    display: inline-block;
+    font-size: 100px;
+}
+
+#minuteClock
+{
+    display: inline-block;
+    font-size: 100px;
+}
+
+#secondClock
+{
+    display: inline-block;
+    font-size: 100px;
+}
+
+
+#dateClock
+{
+    margin-left: 30px;
+    display: inline-block;
+    font-size: 75px;
+}
+
+#monthClock
+{
+    display: inline-block;
+    font-size: 75px;
+}
+
+
+#yearClock
+{
+    display: inline-block;
+    font-size: 75px;
+}
