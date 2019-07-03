@@ -43,6 +43,7 @@ body
     background-color: red;
     margin-bottom: 50px;
     padding-top: 50px;
+    cursor: pointer;
 }
 
 
@@ -88,20 +89,16 @@ body
 .adjust2
 {   transform: translateX(25px);}
 
-.active
-{
-    display: inline-block;
-}
-
 
 /* Clock Styling */
 .clock
 {
+
     position: absolute;
     border-radius: 25px;
     top: 200px;
     left: 500px;
-    display: inline-block;
+    display: none;
     height: 500px;
     width: 900px;
     background-color: whitesmoke;
@@ -170,4 +167,143 @@ body
 {
     display: inline-block;
     font-size: 75px;
+}
+
+.stopwatch
+{
+    display: none;
+    position: absolute;
+    border-radius: 45%;
+    top: 200px;
+    left: 600px;
+    height: 500px;
+    width: 500px;
+    background-color: whitesmoke;
+    color: whitesmoke;
+    font-size: 60px; 
+}
+.stopwatch>.border
+{
+    border-radius: 5px;
+    background-color: black;
+    position: relative;
+    border-radius: 45%;
+    top: 50px;
+    left: 50px;
+    height: 400px;
+    width: 400px;
+    font-family: "digital-7_monomono";
+    text-align: center;
+}
+
+
+
+#startStopButton
+{
+    display: inline-block;
+    position: absolute;
+    background-color: red;
+    padding-top: 20px;
+    top: 100px;
+    left: 50px;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#startStopButton:hover 
+{
+    background-color: blueviolet;
+}
+
+#splitResetButton
+{
+    display: inline-block;
+    position: absolute;
+    background-color: red;
+    padding-top: 20px;
+    top: 100px;
+    left: 250px;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+#splitResetButton:hover 
+{
+    background-color: blueviolet;
+}
+
+#minuteStopwatch
+{
+    display: inline-block;
+    position: absolute;
+    padding-top: 20px;
+    top: 200px;
+    left: 80px;
+    border-radius: 20px;
+}
+
+#secondStopwatch
+{
+    display: inline-block;
+    position: absolute;
+    padding-top: 20px;
+    top: 200px;
+    left: 180px;
+    border-radius: 20px;
+}
+
+#milisecondStopwatch
+{
+    display: inline-block;
+    position: absolute;
+    padding-top: 20px;
+    top: 215px;
+    left: 280px;
+    border-radius: 20px;
+
+    font-size: 40px;
+}
+
+/* Stopwatch Split Box */
+.splitBox
+{
+    position: absolute;
+    height: 100%;
+    top: 200px;
+    left: 1150px;
+    display: none;
+    font-family: monospace;
+    font-size: 40px;
+}
+
+.splitBoxRow
+{    display: table-row;}
+.splitBoxRow:nth-child(2n)
+{    background-color: grey;}
+.splitBoxRow:nth-child(2n-1)
+{    background-color: whitesmoke;}
+
+#countNumber
+{
+    display: table-cell;
+    padding-right: 100px;
+}
+#splitTime
+{
+    display: table-cell;
+    padding-right: 100px;
+}
+#deltaTime
+{
+    display: table-cell;
+}
+
+.active
+{
+    display: inline-block;
 }
