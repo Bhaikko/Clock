@@ -10,5 +10,85 @@
 
 body 
 {
-    font-family: "digital-7_monomono";
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 0px;
+    user-select: none;
+}
+
+
+.leftBar
+{
+    display: none;
+    height: 100%;
+    width: 50px;
+    background-color: rgba(100, 0, 0, 0.5);
+}
+
+.leftBar img 
+{
+    width: 50px;
+    margin-bottom: 200px;
+}
+
+.leftBar>.icon:hover 
+{
+    background-color: whitesmoke;
+}
+
+
+
+.icon
+{
+    height: 100px;
+    background-color: red;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+.leftBarExpanded
+{
+    display: none;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(100, 0, 0, 0.5);
+    
+}
+.leftBarExpanded>.icon 
+{
+    height: 150px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+}
+
+.leftBarExpanded>.icon img 
+{
+    width: 100px;
+    margin-bottom: 200px;
+}
+
+.leftBarExpanded>.icon:hover 
+{
+    background-color: whitesmoke;
+}
+
+.clockHeading
+{
+    font-family: monospace;
+    font-size: 30px;
+    width: 100px;
+    margin-left: -25px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.adjust1
+{   transform: translateX(23px);}
+
+.adjust2
+{   transform: translateX(25px);}
+
+.active
+{
+    display: inline-block;
 }
