@@ -1,3 +1,4 @@
+let stopwatch = document.getElementById("stopwatch");
 let startStopButton = document.getElementById("startStopButton");
 let splitResetButton = document.getElementById("splitResetButton");
 

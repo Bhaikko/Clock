@@ -83,6 +83,9 @@ body
     text-align: center;
 }
 
+.selected
+{   background-color: whitesmoke;}
+
 .adjust1
 {   transform: translateX(23px);}
 

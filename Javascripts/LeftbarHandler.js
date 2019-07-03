@@ -19,8 +19,33 @@ function enableLeftBar()
     leftBarExpanded[0].classList.remove("active");
 }
 
-clockButton[1].addEventListener("click", enableLeftBar);
-stopwatchButton[1].addEventListener("click", enableLeftBar);
-timerButton[1].addEventListener("click", enableLeftBar);
+function enableClock()
+{
+    clock.classList.add("active");
+    stopwatch.classList.remove("active");
+    splitbox.classList.remove("active");
+    enableLeftBar();
+    clockButton[0].parentElement.classList.add("selected");
+    clockButton[1].parentElement.classList.add("selected");
+    stopwatchButton[0].parentElement.classList.remove("selected");
+    stopwatchButton[1].parentElement.classList.remove("selected");
+}
 
-console.log("Executed");
+function enableStopwatch()
+{
+    clock.classList.remove("active");
+    stopwatch.classList.add("active");
+    splitbox.classList.add("active");
+    enableLeftBar();
+
+    clockButton[0].parentElement.classList.remove("selected");
+    clockButton[1].parentElement.classList.remove("selected");
+    stopwatchButton[0].parentElement.classList.add("selected");
+    stopwatchButton[1].parentElement.classList.add("selected");
+}
+
+clockButton[0].addEventListener("click", enableClock);
+clockButton[1].addEventListener("click", enableClock);
+stopwatchButton[0].addEventListener("click", enableStopwatch);
+stopwatchButton[1].addEventListener("click", enableStopwatch);
+// timerButton[1].addEventListener("click", enableLeftBar);

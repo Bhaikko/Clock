@@ -8,10 +8,11 @@ let dateClock = document.getElementById("dateClock");
 let monthClock = document.getElementById("monthClock");
 let yearClock = document.getElementById("yearClock");
 
-let bClockRunning = clock.getAttribute("class").includes("active");
+
 
 function setClockData()
 {
+    let bClockRunning = clock.getAttribute("class").includes("active");
     if(bClockRunning)
     {
         console.log("Clock Running");
