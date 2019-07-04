@@ -32,7 +32,7 @@
         </div>  
     </div>
 
-    <div class="clock active" id="clock">
+    <div class="clock" id="clock">
         <div class="border">
             <div id="day"></div><br>
             <div id="timeOfDay"></div><br>
@@ -65,13 +65,37 @@
             <div id="countNumber">Count 0</div>
             <div id="splitTime">00:00:94</div>
             <div id="deltaTime">+00:00.16</div>
-        </div> -->
-        
+        </div> -->       
+    </div>
+
+    <div id="timeUpText" class="timeUpText">Time's Up !!!</div>
+    <div class="timer active" id="timer">  
+        <div class="border">
+            <div id="hourTimer">
+                <div id="hourIncreaseButton">&#8657;</div>
+                <div id="hourDisplay">0 h</div>
+                <div id="hourDecreaseButton">&#8659;</div>
+            </div>
+            <div id="minuteTimer">
+                <div id="minuteIncreaseButton">&#8657;</div>
+                <div id="minuteDisplay">0 m</div>
+                <div id="minuteDecreaseButton">&#8659;</div>
+            </div>
+            <div id="secondTimer">
+                <div id="secondIncreaseButton">&#8657;</div>
+                <div id="secondDisplay">1 s</div>
+                <div id="secondDecreaseButton">&#8659;</div>
+            </div>
+            <div id="startPauseButton">Start</div>
+            <div id="resetButton">Reset</div>
+
+        </div>
     </div>
 
     <script src="Javascripts/LeftbarHandler.js"></script>
     <script src="Javascripts/Clock.js"></script>
     <script src="Javascripts/Stopwatch.js"></script>
+    <script src="Javascripts/Timer.js"></script>
     
 </body>
 </html> 

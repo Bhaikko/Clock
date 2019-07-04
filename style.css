@@ -172,6 +172,7 @@ body
     font-size: 75px;
 }
 
+/* Stopwatch Styling */
 .stopwatch
 {
     display: none;
@@ -302,11 +303,123 @@ body
     padding-right: 100px;
 }
 #deltaTime
+{    display: table-cell;}
+
+
+/* Timer Styling */
+.timeUpText
+{ display: none;}
+#timeUpText
+{    
+    font-size: 100px;
+    color: whitesmoke;
+    position: absolute;
+    left: 770px;
+    top: 50px;
+}
+
+.timer
 {
-    display: table-cell;
+    display: none;
+    position: absolute;
+    border-radius: 5%;
+    top: 250px;
+    left: 600px;
+    height: 250px;
+    width: 800px;
+    background-color: whitesmoke;
+    color: whitesmoke;
+    font-size: 60px; 
+}
+
+.timer>.border
+{
+    background-color: black;
+    position: relative;
+    border-radius: 5%;
+    top: 20px;
+    left: 50px;
+    height: 200px;
+    width: 700px;
+    font-family: "digital-7_monomono";
+    text-align: center;
+}
+
+#hourTimer
+{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+#hourDisplay
+{
+    text-align: center;
+    transform: translate(20px, -5px);
+}
+
+
+#minuteTimer
+{
+    position: absolute;
+    top: 10px;
+    left: 180px;
+}
+#minuteDisplay
+{
+    text-align: center;
+    transform: translate(20px, -5px);
+}
+
+
+#secondTimer
+{
+    position: absolute;
+    top: 10px;
+    left: 340px;
+}
+#secondDisplay
+{
+    text-align: center;
+    transform: translate(20px, -5px);
+}
+#startPauseButton
+{
+    display: inline-block;
+    position: absolute;
+    background-color: red;
+    padding-top: 20px;
+    top: 15px;
+    left: 550px;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+#startPauseButton:hover 
+{
+    background-color: blueviolet;
+}
+#resetButton
+{
+    display: inline-block;
+    position: absolute;
+    background-color: red;
+    padding-top: 20px;
+    top: 100px;
+    left: 550px;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+#resetButton:hover 
+{
+    background-color: blueviolet;
 }
 
 .active
-{
-    display: inline-block;
-}
+{    display: inline-block;}
+

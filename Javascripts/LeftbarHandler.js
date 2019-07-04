@@ -48,4 +48,4 @@ clockButton[0].addEventListener("click", enableClock);
 clockButton[1].addEventListener("click", enableClock);
 stopwatchButton[0].addEventListener("click", enableStopwatch);
 stopwatchButton[1].addEventListener("click", enableStopwatch);
-// timerButton[1].addEventListener("click", enableLeftBar);
+timerButton[1].addEventListener("click", enableLeftBar);

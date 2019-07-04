@@ -36,7 +36,7 @@ function setClockData()
 
         //Time Of Day Setup
         const time = currentDate[4].split(":");
-        if(time[0]>="6" && time[0]<"12")
+        if(time[0]>="06" && time[0]<"12")
             timeOfDay.innerText = "Morning";
         else if(time[0]>="12" && time[0]<"17")
             timeOfDay.innerText = "Afternoon";
