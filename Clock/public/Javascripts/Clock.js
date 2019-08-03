@@ -15,7 +15,7 @@ function setClockData()
     let bClockRunning = clock.getAttribute("class").includes("active");
     if(bClockRunning)
     {
-        console.log("Clock Running");
+        // console.log("Clock Running");
         const currentDate = (new Date()).toString().split(" ");
 
         //Day Setup

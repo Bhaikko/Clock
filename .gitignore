@@ -1,6 +1,2 @@
-# # Fonts
-*.ttf
-
-#Folder
-Fonts/*
-Icons/* 
+## Nodemodules
+node_modules/

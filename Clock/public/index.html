@@ -5,33 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clock</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/index.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </head>
-<body>
-    <div class="leftBar active">
-        <div class="icon"><img src="Icons/Bars.png" id="expandButton"></div>
-        <div class="icon"><img src="Icons/Clock.png" class="clockButton"></div>
-        <div class="icon"><img src="Icons/Stopwatch.png" class="stopwatchButton"></div>
-        <div class="icon"><img src="Icons/Timer.png" class="timerButton"></div>
-        
+<body class="bg-dark">
+    <div class="leftBar bg-danger">
+        <button class="btn btn-primary ml-1 mt-5 leftBarButton">
+            <div class="text-dark font-weight-bold">Clock</div>
+            <img src="Icons/Clock.png" width="115px">
+        </button>
+        <button class="btn btn-primary ml-1 mt-5 leftBarButton">
+            <div class="text-dark font-weight-bold">Stopwatch</div>
+            <img src="Icons/Stopwatch.png" width="115px">
+        </button>
+        <button class="btn btn-primary ml-1 mt-5 leftBarButton">
+            <div class="text-dark font-weight-bold">Timer</div>
+            <img src="Icons/Timer.png" width="115px">
+        </button>
     </div>
 
-    <div class="leftBarExpanded">
-        <div class="icon">
-            <div class="clockHeading adjust1">Clock</div>
-            <img src="Icons/Clock.png" class="clockButton">
-        </div>
-        <div class="icon">
-            <div class="clockHeading">Stopwatch</div>
-            <img src="Icons/Stopwatch.png" class="stopwatchButton">
-        </div>
-        <div class="icon">
-            <div class="clockHeading adjust2">Timer</div>
-            <img src="Icons/Timer.png" class="timerButton">
-        </div>  
-    </div>
-
+<!-- 
     <div class="clock" id="clock">
         <div class="border">
             <div id="day"></div><br>
@@ -60,12 +59,7 @@
             <div id="countNumber"><b>Count</b></div>
             <div id="splitTime"><b>Split Time</b></div>
             <div id="deltaTime"><b>Delta Time</b></div>
-        </div>
-        <!-- <div class="splitBoxRow">
-            <div id="countNumber">Count 0</div>
-            <div id="splitTime">00:00:94</div>
-            <div id="deltaTime">+00:00.16</div>
-        </div> -->       
+        </div>       
     </div>
 
     <div id="timeUpText" class="timeUpText">Time's Up !!!</div>
@@ -90,12 +84,12 @@
             <div id="resetButton">Reset</div>
 
         </div>
-    </div>
+    </div> -->
 
-    <script src="Javascripts/LeftbarHandler.js"></script>
-    <script src="Javascripts/Clock.js"></script>
+    <!-- <script src="Javascripts/LeftbarHandler.js"></script> -->
+    <!-- <script src="Javascripts/Clock.js"></script>
     <script src="Javascripts/Stopwatch.js"></script>
-    <script src="Javascripts/Timer.js"></script>
+    <script src="Javascripts/Timer.js"></script> -->
     
 </body>
 </html> 
