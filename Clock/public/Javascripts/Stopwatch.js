@@ -1,12 +1,9 @@
-let stopwatch = document.getElementById("stopwatch");
-let startStopButton = document.getElementById("startStopButton");
-let splitResetButton = document.getElementById("splitResetButton");
+let startStopButton = $("#startStopButton");
+let splitResetButton = $("#splitResetButton");
 
-let minuteStopwatch = document.getElementById("minuteStopwatch");
-let secondStopwatch = document.getElementById("secondStopwatch");
-let milisecondStopwatch = document.getElementById("milisecondStopwatch");
-
-let splitBox = document.getElementsByClassName("splitBox")[0];
+let minuteStopwatch = $("#minuteStopwatch");
+let secondStopwatch = $("#secondStopwatch");
+let milisecondStopwatch = $("#milisecondStopwatch");
 
 let miliseconds = 0;
 let seconds = 0;
@@ -20,26 +17,26 @@ var previousSeconds = 0;
 var previousMinutes = 0;
 var currentCount = 0;
 
-startStopButton.addEventListener("click", function()
+startStopButton.click(function()
 {    
     
     if(!bStarted)
     {
         stopWatchId = setInterval(startStopwatch, 10);
-        startStopButton.innerText = "Stop";
-        splitResetButton.innerText = "Split";
+        startStopButton.text("Stop");
+        splitResetButton.text("Split");
         bStarted = true;
     }
     else if(bStarted)
     {
         clearInterval(stopWatchId);
-        startStopButton.innerText = "Start";
-        splitResetButton.innerText = "Reset";
+        startStopButton.text("Start");
+        splitResetButton.text("Reset");
         bStarted = false;
     }
 })
 
-splitResetButton.addEventListener("click", function()
+splitResetButton.click(function()
 {
     if(!bStarted)
     {
@@ -47,9 +44,9 @@ splitResetButton.addEventListener("click", function()
         seconds = 0;
         minutes = 0;
 
-        minuteStopwatch.innerText = " " + minutes + " : ";
-        secondStopwatch.innerText = seconds + " : ";
-        milisecondStopwatch.innerText = miliseconds;
+        minuteStopwatch.text(" " + minutes + " : ");
+        secondStopwatch.text(seconds + " : ");
+        milisecondStopwatch.text(miliseconds);
 
         splitBoxChildren = document.querySelectorAll(".splitBox>.splitBoxRow");
         for(let i=1; i<splitBoxChildren.length; i++)
@@ -69,27 +66,27 @@ splitResetButton.addEventListener("click", function()
         
         let countNumber = document.createElement("div");
         countNumber.id = "countNumber";
-        countNumber.innerText = currentCount;
+        countNumber.text(currentCount);
         currentCount++;
 
         let splitTime = document.createElement("div");
         splitTime.id = "splitTime";
-        splitTime.innerText = minutes + ":" + seconds + "." + miliseconds;
+        splitTime.text(minutes + ":" + seconds + "." + miliseconds);
 
         let deltaTime = document.createElement("div");
         deltaTime.id = "deltaTime";
-        deltaTime.innerText = "+" + (Math.abs(parseInt(minuteStopwatch.innerText) - previousMinutes)) + ":" + (Math.abs(parseInt(secondStopwatch.innerText) - previousSeconds)) + "." + (Math.abs(parseInt(milisecondStopwatch.innerText) - previousMiliseconds));
-    
+
+        deltaTime.text((Math.abs(parseInt(minuteStopwatch[0].innerText) - previousMinutes)) + ":" + (Math.abs(parseInt(secondStopwatch[0].innerText) - previousSeconds)) + "." + (Math.abs(parseInt(milisecondStopwatch[0].innerText) - previousMiliseconds)));
+        
         splitBoxRow.appendChild(countNumber);
         splitBoxRow.appendChild(splitTime);
         splitBoxRow.appendChild(deltaTime);
 
         splitBox.appendChild(splitBoxRow);
 
-        previousMinutes = parseInt(minuteStopwatch.innerText);
-        previousSeconds = parseInt(secondStopwatch.innerText);
-        previousMiliseconds = parseInt(milisecondStopwatch.innerText);
-        
+        previousMinutes = parseInt(minuteStopwatch[0].innerText);
+        previousSeconds = parseInt(secondStopwatch[0].innerText);
+        previousMiliseconds = parseInt(milisecondStopwatch[0].innerText);
     }
 })
 
@@ -107,9 +104,9 @@ function startStopwatch()
     }
     miliseconds++;
 
-    minuteStopwatch.innerText = " " + minutes + " : ";
-    secondStopwatch.innerText = seconds + " : ";
+    minuteStopwatch.text(" " + minutes + " : ");
+    secondStopwatch.text(seconds + " : ");
         
-    milisecondStopwatch.innerText = miliseconds;
+    milisecondStopwatch.text(miliseconds);
     
 }

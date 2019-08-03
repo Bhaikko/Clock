@@ -12,6 +12,7 @@ body
 {
     margin: 0px;
     user-select: none;
+    height: 100%;
 }
 
 
@@ -19,6 +20,8 @@ body
 {
     position: absolute;
     left: 0px;
+    top: 0px;
+    display: inline-block;
     height: 100%;
     width: 150px;
 }
@@ -28,84 +31,47 @@ body
     background-color: whitesmoke !important;
 }
 
+.selected
+{
+    background-color: #0d47a1 !important;
+}
+
+.active
+{
+    display: inline-block;
+}
+
 /* Clock Styling */
 .clock
 {
-
-    position: absolute;
-    border-radius: 25px;
-    top: 200px;
-    left: 500px;
     display: none;
+    margin-top: 100px;
+    margin-left: 20%;
+    border-radius: 25px;
     height: 500px;
-    width: 900px;
-    background-color: whitesmoke;
-    color: whitesmoke;
+    width: 900px;   
 
 }
 
 .clock>.border
 {
-    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 75px;
+    height: 385px;
+    width: 750px;
     background-color: black;
-    position: relative;
-    top: 50px;
-    left: 75px;
-    height: 300px;
-    width: 650px;
-    padding: 50px;
     font-family: "digital-7_monomono";
+    font-size: 50px;
     text-align: center;
 }
 
-#day
-{
-    font-size: 100px;
-}
-
-#timeOfDay
-{
-    font-size: 50px;
-}
-
-#hourClock
+.clock>.border>div 
 {
     display: inline-block;
-    font-size: 100px;
-}
-
-#minuteClock
-{
-    display: inline-block;
-    font-size: 100px;
-}
-
-#secondClock
-{
-    display: inline-block;
-    font-size: 100px;
 }
 
 
-#dateClock
-{
-    margin-left: 30px;
-    display: inline-block;
-    font-size: 75px;
-}
 
-#monthClock
-{
-    display: inline-block;
-    font-size: 75px;
-}
-
-
-#yearClock
-{
-    display: inline-block;
-    font-size: 75px;
-}
 
 /* Stopwatch Styling */
 .stopwatch

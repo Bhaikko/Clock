@@ -1,20 +1,19 @@
-let timer = document.getElementById("timer");
-let timeUpText = document.getElementById("timeUpText");
+let timeUpText = $("#timeUpText");
 
-let hourIncreaseButton = document.getElementById("hourIncreaseButton");
-let hourDisplay = document.getElementById("hourDisplay");
-let hourDecreaseButton = document.getElementById("hourDecreaseButton");
+let hourIncreaseButton = $("#hourIncreaseButton");
+let hourDisplay = $("#hourDisplay");
+let hourDecreaseButton = $("#hourDecreaseButton");
 
-let minuteIncreaseButton = document.getElementById("minuteIncreaseButton");
-let minuteDisplay = document.getElementById("minuteDisplay");
-let minuteDecreaseButton = document.getElementById("minuteDecreaseButton");
+let minuteIncreaseButton = $("#minuteIncreaseButton");
+let minuteDisplay = $("#minuteDisplay");
+let minuteDecreaseButton = $("#minuteDecreaseButton");
 
-let secondIncreaseButton = document.getElementById("secondIncreaseButton");
-let secondDisplay = document.getElementById("secondDisplay");
-let secondDecreaseButton = document.getElementById("secondDecreaseButton");
+let secondIncreaseButton = $("#secondIncreaseButton");
+let secondDisplay = $("#secondDisplay");
+let secondDecreaseButton = $("#secondDecreaseButton");
 
-let startPauseButton = document.getElementById("startPauseButton");
-let resetButton = document.getElementById("resetButton");
+let startPauseButton = $("#startPauseButton");
+let resetButton = $("#resetButton");
 
 let bTimerStarted = false;
 let timerId = null;
@@ -24,90 +23,90 @@ let timerInitialMinutes = 0;
 let timerInitialHours = 0;
 
 
-hourIncreaseButton.addEventListener("click", function()
+hourIncreaseButton.click(function()
 {
-    if(parseInt(hourDisplay.innerText) < 24 && !bTimerStarted)
+    if(parseInt(hourDisplay.text()) < 24 && !bTimerStarted)
     {
-        hourDisplay.innerText = parseInt(hourDisplay.innerText) + 1;
-        hourDisplay.innerText += " h"
+        hourDisplay.text(parseInt(hourDisplay.text()) + 1);
+        hourDisplay.text(hourDisplay.text() + " h");
     }    
 });
 
-hourDecreaseButton.addEventListener("click", function()
+hourDecreaseButton.click(function()
 {
-    if(hourDisplay.innerText > "1" && !bTimerStarted)
+    if(hourDisplay.text() > "1" && !bTimerStarted)
     {
-        hourDisplay.innerText = parseInt(hourDisplay.innerText) - 1;
-        hourDisplay.innerText += " h"
+        hourDisplay.text(parseInt(hourDisplay.text()) - 1);
+        hourDisplay.text(hourDisplay.text() + " h");
     }
 });
 
-minuteIncreaseButton.addEventListener("click", function()
+minuteIncreaseButton.click(function()
 {
-    if(parseInt(minuteDisplay.innerText) < 58 && !bTimerStarted)
+    if(parseInt(minuteDisplay.text()) < 58 && !bTimerStarted)
     {
-        minuteDisplay.innerText = parseInt(minuteDisplay.innerText) + 1;
-        minuteDisplay.innerText += " m"
+        minuteDisplay.text(parseInt(minuteDisplay.text()) + 1);
+        minuteDisplay.text(minuteDisplay.text() + " m");
     }
 });
 
-minuteDecreaseButton.addEventListener("click", function()
+minuteDecreaseButton.click(function()
 {
-    if(minuteDisplay.innerText > "1" && !bTimerStarted)
+    if(minuteDisplay.text() > "1" && !bTimerStarted)
     {
-        minuteDisplay.innerText = parseInt(minuteDisplay.innerText) - 1;
-        minuteDisplay.innerText += " m"
+        minuteDisplay.text() = parseInt(minuteDisplay.text()) - 1;
+        minuteDisplay.text(minuteDisplay.text() + " m");
     }
 });
 
-secondIncreaseButton.addEventListener("click", function()
+secondIncreaseButton.click(function()
 {
-    if(parseInt(secondDisplay.innerText) < 58 && !bTimerStarted)
+    if(parseInt(secondDisplay.text()) < 58 && !bTimerStarted)
     {
-        secondDisplay.innerText = parseInt(secondDisplay.innerText) + 1;
-        secondDisplay.innerText += " s"
+        secondDisplay.text(parseInt(secondDisplay.text()) + 1);
+        secondDisplay.text(secondDisplay.text() + " s");
     }
 });
 
-secondDecreaseButton.addEventListener("click", function()
+secondDecreaseButton.click(function()
 {
-    if(secondDisplay.innerText > "1" && !bTimerStarted)
+    if(secondDisplay.text() > "1" && !bTimerStarted)
     {
-        secondDisplay.innerText = parseInt(secondDisplay.innerText) - 1;
-        secondDisplay.innerText += " s"
+        secondDisplay.text(parseInt(secondDisplay.text()) - 1);
+        secondDisplay.text(secondDisplay.text() + " s");
     }
 });
 
-startPauseButton.addEventListener("click", function()
+startPauseButton.click(function()
 {    
-    timerInitialHours = parseInt(hourDisplay.innerText);
-    timerInitialMinutes = parseInt(minuteDisplay.innerText);
-    timerInitialSeconds = parseInt(secondDisplay.innerText);
+    timerInitialHours = parseInt(hourDisplay.text());
+    timerInitialMinutes = parseInt(minuteDisplay.text());
+    timerInitialSeconds = parseInt(secondDisplay.text());
     timeUpText.classList.remove("active");
     if(!bTimerStarted)
     {
         timerId = setInterval(startTimer, 1000);
-        startPauseButton.innerText = "Stop";
+        startPauseButton.text("Stop");
         bTimerStarted = true;
     }
     else if(bTimerStarted)
     {
         clearInterval(timerId);
-        startPauseButton.innerText = "Start";
+        startPauseButton.text("Start");
         bTimerStarted = false;
     }
 });
 
-resetButton.addEventListener("click", function()
+resetButton.click(function()
 {
     if(!bTimerStarted)
     {
         timerInitialHours = 0;
         timerInitialMinutes = 0;
         timerInitialSeconds = 0;
-        hourDisplay.innerText = timerInitialHours + " h";
-        minuteDisplay.innerText = timerInitialMinutes + " m";
-        secondDisplay.innerText = timerInitialSeconds + " s";
+        hourDisplay.text(timerInitialHours + " h");
+        minuteDisplay.text(timerInitialMinutes + " m");
+        secondDisplay.text(timerInitialSeconds + " s");
     }
 })
 
@@ -132,22 +131,22 @@ function startTimer()
         timerInitialMinutes = 59;
     }
 
-    hourDisplay.innerText = timerInitialHours + " h";
-    minuteDisplay.innerText = timerInitialMinutes + " m";
-    secondDisplay.innerText = timerInitialSeconds + " s";
+    hourDisplay.text(timerInitialHours + " h");
+    minuteDisplay.text(timerInitialMinutes + " m");
+    secondDisplay.text(timerInitialSeconds + " s");
 
 }
 
 function timeup()
 {
     clearInterval(timerId);
-    timeUpText.classList.add("active");
-    startPauseButton.innerText = "Start";
+    timeUpText.addClass("active");
+    startPauseButton.text("Start");
     bTimerStarted = false;
     timerInitialHours = 0;
     timerInitialMinutes = 0;
     timerInitialSeconds = 0;
-    hourDisplay.innerText = timerInitialHours + " h";
-    minuteDisplay.innerText = timerInitialMinutes + " m";
-    secondDisplay.innerText = timerInitialSeconds + " s";
+    hourDisplay.text(timerInitialHours + " h");
+    minuteDisplay.text(timerInitialMinutes + " m");
+    secondDisplay.text(timerInitialSeconds + " s");
 }
