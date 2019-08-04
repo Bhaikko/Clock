@@ -4,7 +4,7 @@ let timerButton = $("#timerButton");
 
 let clock = $("#clock");
 let stopwatch = $("#stopwatch");
-let splitbox = $("#splitbox");
+let splitbox = $("#splitBox");
 let timer = $("#timer");
 
 let bClockRunning = false;

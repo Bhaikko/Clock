@@ -70,228 +70,125 @@ body
     display: inline-block;
 }
 
-
-
-
 /* Stopwatch Styling */
 .stopwatch
 {
+    margin-left: 20%;
+    margin-top: 75px;
     display: none;
-    position: absolute;
     border-radius: 45%;
-    top: 200px;
-    left: 600px;
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     background-color: whitesmoke;
     color: whitesmoke;
-    font-size: 60px; 
+    font-size: 50px; 
 }
 .stopwatch>.border
 {
+    margin: 13%;
+    padding-top: 15%;
     border-radius: 5px;
     background-color: black;
-    position: relative;
     border-radius: 45%;
-    top: 50px;
-    left: 50px;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     font-family: "digital-7_monomono";
     text-align: center;
 }
 
-
-
 #startStopButton
 {
     display: inline-block;
-    position: absolute;
-    background-color: red;
-    padding-top: 20px;
-    top: 100px;
-    left: 50px;
     height: 50px;
     width: 100px;
     border-radius: 20px;
     font-size: 40px;
     cursor: pointer;
+    background-color: #CC0000;
 }
 
 #startStopButton:hover 
 {
-    background-color: blueviolet;
+    background-color: #0099CC !important;
 }
 
 #splitResetButton
 {
     display: inline-block;
-    position: absolute;
-    background-color: red;
-    padding-top: 20px;
-    top: 100px;
-    left: 250px;
     height: 50px;
     width: 100px;
     border-radius: 20px;
     font-size: 40px;
     cursor: pointer;
+    background-color: #CC0000;
 }
 #splitResetButton:hover 
 {
-    background-color: blueviolet;
+    background-color: #0099CC !important;
 }
 
-#minuteStopwatch
+.stopwatchDisplay
 {
     display: inline-block;
-    position: absolute;
     padding-top: 20px;
-    top: 200px;
-    left: 80px;
     border-radius: 20px;
-}
-
-#secondStopwatch
-{
-    display: inline-block;
-    position: absolute;
-    padding-top: 20px;
-    top: 200px;
-    left: 180px;
-    border-radius: 20px;
-}
-
-#milisecondStopwatch
-{
-    display: inline-block;
-    position: absolute;
-    padding-top: 20px;
-    top: 215px;
-    left: 280px;
-    border-radius: 20px;
-
-    font-size: 40px;
 }
 
 /* Stopwatch Split Box */
-.splitBox
+.splitBox 
 {
-    position: absolute;
-    height: 100%;
-    top: 200px;
-    left: 1150px;
     display: none;
-    font-family: monospace;
-    font-size: 40px;
+    vertical-align: top;
+    margin: 50px;
 }
-
-.splitBoxRow
-{    display: table-row;}
-.splitBoxRow:nth-child(2n)
-{    background-color: grey;}
-.splitBoxRow:nth-child(2n-1)
-{    background-color: whitesmoke;}
-
-#countNumber
+th
 {
-    display: table-cell;
-    padding-right: 100px;
+    text-align: center;
+    white-space: nowrap;
+    padding-right: 50px !important;
 }
-#splitTime
-{
-    display: table-cell;
-    padding-right: 100px;
-}
-#deltaTime
-{    display: table-cell;}
 
 
 /* Timer Styling */
+
 .timeUpText
-{ display: none;}
-#timeUpText
 {    
-    font-size: 100px;
+    display: none;
+    margin-top: 50px;
+    margin-left: 500px;
+    font-size: 70px;
     color: whitesmoke;
-    position: absolute;
-    left: 770px;
-    top: 50px;
 }
 
 .timer
 {
+    margin-left: 20%;
+    margin-top: 100px;
     display: none;
-    position: absolute;
     border-radius: 5%;
-    top: 250px;
-    left: 600px;
-    height: 250px;
+    height: 350px;
     width: 800px;
     background-color: whitesmoke;
     color: whitesmoke;
-    font-size: 60px; 
+    font-size: 40px; 
 }
 
 .timer>.border
 {
+    margin-top: 25px;
+    margin-left: 50px;
     background-color: black;
-    position: relative;
     border-radius: 5%;
-    top: 20px;
-    left: 50px;
-    height: 200px;
+    height: 300px;
     width: 700px;
     font-family: "digital-7_monomono";
     text-align: center;
 }
 
-#hourTimer
-{
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    left: 30px;
-}
-#hourDisplay
-{
-    text-align: center;
-    transform: translate(20px, -5px);
-}
-
-
-#minuteTimer
-{
-    position: absolute;
-    top: 10px;
-    left: 180px;
-}
-#minuteDisplay
-{
-    text-align: center;
-    transform: translate(20px, -5px);
-}
-
-
-#secondTimer
-{
-    position: absolute;
-    top: 10px;
-    left: 340px;
-}
-#secondDisplay
-{
-    text-align: center;
-    transform: translate(20px, -5px);
-}
 #startPauseButton
 {
     display: inline-block;
-    position: absolute;
-    background-color: red;
-    padding-top: 20px;
-    top: 15px;
-    left: 550px;
+    background-color: #CC0000;
     height: 50px;
     width: 100px;
     border-radius: 20px;
@@ -300,16 +197,12 @@ body
 }
 #startPauseButton:hover 
 {
-    background-color: blueviolet;
+    background-color: #0099CC !important;
 }
 #resetButton
 {
     display: inline-block;
-    position: absolute;
-    background-color: red;
-    padding-top: 20px;
-    top: 100px;
-    left: 550px;
+    background-color: #CC0000;
     height: 50px;
     width: 100px;
     border-radius: 20px;
@@ -318,7 +211,7 @@ body
 }
 #resetButton:hover 
 {
-    background-color: blueviolet;
+    background-color: #0099CC !important;
 }
 
 .active

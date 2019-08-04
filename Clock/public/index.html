@@ -52,40 +52,71 @@
         <div class="border">
             <div id="startStopButton">Start</div>
             <div id="splitResetButton">Reset</div>
-            <div id="minuteStopwatch">0 :</div>
-            <div id="secondStopwatch">0 :</div>
-            <div id="milisecondStopwatch">0</div>
+            <div id="minuteStopwatch" class="stopwatchDisplay">0 :</div>
+            <div id="secondStopwatch" class="stopwatchDisplay">0 :</div>
+            <div id="milisecondStopwatch" class="stopwatchDisplay" style="font-size: 35px;">0</div>
         </div>
     </div>
 
-    <div class="splitBox" id="splitbox">
-        <div class="splitBoxRow">
-            <div id="countNumber"><b>Count</b></div>
-            <div id="splitTime"><b>Split Time</b></div>
-            <div id="deltaTime"><b>Delta Time</b></div>
-        </div>       
+
+
+    <div class="splitBox" id="splitBox">
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Count</th>
+                    <th scope="col">Split Time</th>
+                    <th scope="col">Delta Time</th>
+                </tr>
+            </thead>
+            <tbody id="splitBoxBody">
+            
+            </tbody>
+        </table>  
     </div>
 
     <div id="timeUpText" class="timeUpText">Time's Up !!!</div>
-    <div class="timer" id="timer">  
+    <div class="timer active" id="timer">  
         <div class="border">
-            <div id="hourTimer">
-                <div id="hourIncreaseButton">&#8657;</div>
-                <div id="hourDisplay">0 h</div>
-                <div id="hourDecreaseButton">&#8659;</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div id="hourTimer">
+                            <div id="hourIncreaseButton">&#8657;</div>
+                            <div id="hourDisplay">0 h</div>
+                            <div id="hourDecreaseButton">&#8659;</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="minuteTimer">
+                            <div id="minuteIncreaseButton">&#8657;</div>
+                            <div id="minuteDisplay">0 m</div>
+                            <div id="minuteDecreaseButton">&#8659;</div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div id="secondTimer">
+                            <div id="secondIncreaseButton">&#8657;</div>
+                            <div id="secondDisplay">1 s</div>
+                            <div id="secondDecreaseButton">&#8659;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <div id="startPauseButton">Start</div>
+                    </div>
+                    <div class="col">
+                        <div id="resetButton">Reset</div>
+                    </div>
+                </div>
             </div>
-            <div id="minuteTimer">
-                <div id="minuteIncreaseButton">&#8657;</div>
-                <div id="minuteDisplay">0 m</div>
-                <div id="minuteDecreaseButton">&#8659;</div>
-            </div>
-            <div id="secondTimer">
-                <div id="secondIncreaseButton">&#8657;</div>
-                <div id="secondDisplay">1 s</div>
-                <div id="secondDecreaseButton">&#8659;</div>
-            </div>
-            <div id="startPauseButton">Start</div>
-            <div id="resetButton">Reset</div>
+            
+            
+            
+            
+            
 
         </div>
     </div>

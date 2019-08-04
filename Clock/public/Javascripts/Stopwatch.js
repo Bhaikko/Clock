@@ -5,6 +5,8 @@ let minuteStopwatch = $("#minuteStopwatch");
 let secondStopwatch = $("#secondStopwatch");
 let milisecondStopwatch = $("#milisecondStopwatch");
 
+let splitBoxBody = $("#splitBoxBody");
+
 let miliseconds = 0;
 let seconds = 0;
 let minutes = 0;
@@ -48,9 +50,7 @@ splitResetButton.click(function()
         secondStopwatch.text(seconds + " : ");
         milisecondStopwatch.text(miliseconds);
 
-        splitBoxChildren = document.querySelectorAll(".splitBox>.splitBoxRow");
-        for(let i=1; i<splitBoxChildren.length; i++)
-            splitBoxChildren[i].remove();
+        splitBoxBody.empty();
 
         previousMiliseconds = 0;
         previousSeconds = 0;
@@ -61,28 +61,23 @@ splitResetButton.click(function()
     else if(bStarted) 
     {
         
-        let splitBoxRow = document.createElement("div");
-        splitBoxRow.classList.add("splitBoxRow");
+        let splitBoxRow = document.createElement("tr");
         
-        let countNumber = document.createElement("div");
-        countNumber.id = "countNumber";
-        countNumber.text(currentCount);
+        let countNumber = document.createElement("th");
+        countNumber.innerText = currentCount;
         currentCount++;
 
-        let splitTime = document.createElement("div");
-        splitTime.id = "splitTime";
-        splitTime.text(minutes + ":" + seconds + "." + miliseconds);
+        let splitTime = document.createElement("td");
+        splitTime.innerText = minutes + ":" + seconds + "." + miliseconds;
 
-        let deltaTime = document.createElement("div");
-        deltaTime.id = "deltaTime";
-
-        deltaTime.text((Math.abs(parseInt(minuteStopwatch[0].innerText) - previousMinutes)) + ":" + (Math.abs(parseInt(secondStopwatch[0].innerText) - previousSeconds)) + "." + (Math.abs(parseInt(milisecondStopwatch[0].innerText) - previousMiliseconds)));
+        let deltaTime = document.createElement("td");
+        deltaTime.innerText = (Math.abs(parseInt(minuteStopwatch[0].innerText) - previousMinutes)) + ":" + (Math.abs(parseInt(secondStopwatch[0].innerText) - previousSeconds)) + "." + (Math.abs(parseInt(milisecondStopwatch[0].innerText) - previousMiliseconds));
         
         splitBoxRow.appendChild(countNumber);
         splitBoxRow.appendChild(splitTime);
         splitBoxRow.appendChild(deltaTime);
 
-        splitBox.appendChild(splitBoxRow);
+        splitBoxBody.append(splitBoxRow);
 
         previousMinutes = parseInt(minuteStopwatch[0].innerText);
         previousSeconds = parseInt(secondStopwatch[0].innerText);

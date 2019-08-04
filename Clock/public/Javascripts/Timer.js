@@ -54,7 +54,7 @@ minuteDecreaseButton.click(function()
 {
     if(minuteDisplay.text() > "1" && !bTimerStarted)
     {
-        minuteDisplay.text() = parseInt(minuteDisplay.text()) - 1;
+        minuteDisplay.text(parseInt(minuteDisplay.text()) - 1);
         minuteDisplay.text(minuteDisplay.text() + " m");
     }
 });
@@ -82,7 +82,7 @@ startPauseButton.click(function()
     timerInitialHours = parseInt(hourDisplay.text());
     timerInitialMinutes = parseInt(minuteDisplay.text());
     timerInitialSeconds = parseInt(secondDisplay.text());
-    timeUpText.classList.remove("active");
+    timeUpText.removeClass("active");
     if(!bTimerStarted)
     {
         timerId = setInterval(startTimer, 1000);
