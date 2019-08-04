@@ -34,8 +34,16 @@
 
     
     <div class="clock bg-dark" id="clock">
+        <div class="dropdown" id="zones">
+            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Timezones
+            </button>
+            <div class="dropdown-menu" id="zonesList" aria-labelledby="dropdownMenuButton">
+                <!-- Zones -->
+            </div>
+        </div>
         <div class="border text-light">
-            <div id="place">New Delhi, India</div><br>
+            <div id="place"></div><br>
             <div id="day"></div><br>
             <div id="timeOfDay"></div><br>
             <div id="hourClock"></div>
