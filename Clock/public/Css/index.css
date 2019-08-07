@@ -152,6 +152,8 @@ body
     display: none;
     vertical-align: top;
     margin: 50px;
+    max-height: 500px;
+    overflow-y: auto;
 }
 th
 {
