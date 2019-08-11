@@ -15,6 +15,12 @@ Before running the server on your local machine, following *npm packages* must b
 * [moment-timezone](https://momentjs.com/timezone)
 * [express](https://www.npmjs.com/package/express)
 
+### Build Setup
+Installing Dependencies
+```  
+  npm install
+```
+
 ## Running The Server On Your Machine
 ```
   cd "Clock"
